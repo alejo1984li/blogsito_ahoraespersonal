@@ -125,6 +125,12 @@
   --bs-form-invalid-border-color: #dc3545;
 }
 
+button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 [data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
@@ -809,6 +815,9 @@ progress {
 .row-cols-auto > * {
   flex: 0 0 auto;
   width: auto;
+
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 .row-cols-1 > * {
@@ -4408,6 +4417,7 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
+  margin-top: 20px;
 }
 .card > hr {
   margin-right: 0;
