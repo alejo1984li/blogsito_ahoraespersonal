@@ -2,20 +2,23 @@
 
 {% block content %}
 
-<h2> Blog poetico</h2>
-<a> [ahora es personal]</a>
+
 
 <div class="container">
+
+  <h2> Blog poetico</h2>
+  <p> [ahora es personal]</p>
 
   {% for post in posts%}
   <div class="row row-cols-auto">
   <div class="col">
-    <div class="card" style="width: 20rem;">
+    <div class="card" style="width: 25rem;">
       <img src="{{post.image_frontpage.url}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{post.title}}</h5>
         <p class="card-text">{{post.subtitle}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="{% url 'post' post.id%}" class="btn btn-primary">Leer detalles</a>
+        <a href="{% url 'delete-post' post.id %}?next=/post/{{post.id}}" class="btn btn-danger">Eliminar</a>
       </div>
     </div>
   </div>

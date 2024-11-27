@@ -9,7 +9,7 @@ class Post(models.Model):
     image_frontpage = models.ImageField(null=True, blank=True, default="")
     content = models.TextField(null=True, blank=True)
     author = models.CharField(max_length=100, default='Anónimo')
-    pub_date = models.DateTimeField(auto_now_add=True)
+    post_date = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     
     def __str__(self):

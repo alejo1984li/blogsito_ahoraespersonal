@@ -1,0 +1,26 @@
+{% extends 'main.html'%}
+
+<h2> post page</h2>
+
+{% block content %}
+
+<h1>{{post.title}}</h1>
+
+<h3>{{post.subtitle}}</h3>
+<div class="container">
+    <img class="img-thumbnail" src="{{post.image_frontpage.url}}">
+    <br> 
+    <h6>{{post.description}}</h6>
+    
+    <h7> contenido:</h7>
+
+    <p>{{post.content}}</p>
+    <br> 
+
+    <div class="container">
+        <p>{{post.author}}</p>
+        <p>{{post.post_date}}</p>
+    </div>
+  
+</div>
+{% endblock content%}
